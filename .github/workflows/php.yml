@@ -33,3 +33,5 @@ jobs:
       
     - name: Lancement des tests
       run: make test
+    - name : test
+      run: XDEBUG_MODE=coverage ./vendor/bin/phpunit tst --coverage-txt
