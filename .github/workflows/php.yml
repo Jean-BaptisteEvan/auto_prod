@@ -35,4 +35,17 @@ jobs:
       run: make test
     
     - name : code_coverage
-      run: XDEBUG_MODE=coverage ./vendor/bin/phpunit tst --coverage-cobertura ./log
+      run: XDEBUG_MODE=coverage ./vendor/bin/phpunit tst --coverage-cobertura ./log/coverage_cobertura.xml
+
+                    
+    - name: Code Coverage Summary
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: ./log/coverage_cobertura.xml
+        badge: true
+        format: markdown
+        output: both
+        thresholds: 50 75 
+
+    - name : test visualisation
+      run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
