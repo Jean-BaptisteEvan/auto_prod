@@ -6,4 +6,6 @@ start:
 
 test:
 	# cd tst && ../vendor/bin/phpunit
-	./vendor/bin/phpunit tst
+	# ./vendor/bin/phpunit tst 
+	./vendor/bin/phpunit tst --coverage-html ./log
+	
