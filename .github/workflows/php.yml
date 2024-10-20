@@ -50,9 +50,16 @@ jobs:
     - name : test visualisation
       run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
 
-    - name: PHP Code Sniffer
-      uses: php-actions/phpcs@v1
+    #- name: PHP Code Sniffer
+    #  uses: php-actions/phpcs@v1
+    #  with:
+    #    path: lib/
+
+    - name: PHP Mess Detector
+      uses: php-actions/phpmd@v1
       with:
         path: lib/
+        output: text
+        ruleset: ruleset.xml
 
     
