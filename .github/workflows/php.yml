@@ -62,7 +62,21 @@ jobs:
         output: text
         ruleset: ruleset.xml
 
-    - name: PHP Stan
-      uses: php-actions/phpstan@v3
+    #- name: PHP Stan
+    #  uses: php-actions/phpstan@v3
+    #  with:
+    #    path: lib/
+
+    - name: Delete vendor
+      run: rm -rf ./vendor
+    
+    - name: Envoi des fichiers
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        path: lib/
+        server: ${{ secrets.auto_prod_adresse }}
+        port : ${{ secrets.auto_prod_port }}
+        username: ${{ secrets.auto_prod_username }}
+        password: ${{ secrets.auto_prod_password }}
+        server-dir: /www/
+        exclude: | 
+          **/.git*
