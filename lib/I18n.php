@@ -20,7 +20,7 @@ namespace PrivateBin;
 class I18n
 {
     /**
-     * language
+     * Language
      *
      * @access protected
      * @static
@@ -29,7 +29,7 @@ class I18n
     protected static $_language = 'en';
 
     /**
-     * language fallback
+     * Language fallback
      *
      * @access protected
      * @static
@@ -38,7 +38,7 @@ class I18n
     protected static $_languageFallback = 'en';
 
     /**
-     * language labels
+     * Language labels
      *
      * @access protected
      * @static
@@ -47,7 +47,7 @@ class I18n
     protected static $_languageLabels = array();
 
     /**
-     * available languages
+     * Available languages
      *
      * @access protected
      * @static
@@ -56,7 +56,7 @@ class I18n
     protected static $_availableLanguages = array();
 
     /**
-     * path to language files
+     * Path to language files
      *
      * @access protected
      * @static
@@ -65,7 +65,7 @@ class I18n
     protected static $_path = '';
 
     /**
-     * translation cache
+     * Translation cache
      *
      * @access protected
      * @static
@@ -74,7 +74,7 @@ class I18n
     protected static $_translations = array();
 
     /**
-     * translate a string, alias for translate()
+     * Translate a string, alias for translate()
      *
      * @access public
      * @static
@@ -88,7 +88,7 @@ class I18n
     }
 
     /**
-     * translate a string
+     * Translate a string
      *
      * @access public
      * @static
@@ -138,7 +138,7 @@ class I18n
     }
 
     /**
-     * encode HTML entities for output into an HTML5 document
+     * Encode HTML entities for output into an HTML5 document
      *
      * @access public
      * @static
@@ -151,7 +151,7 @@ class I18n
     }
 
     /**
-     * loads translations
+     * Loads translations
      *
      * From: https://stackoverflow.com/questions/3770513/detect-browser-language-in-php#3771447
      *
@@ -184,7 +184,7 @@ class I18n
     }
 
     /**
-     * get list of available translations based on files found
+     * Get list of available translations based on files found
      *
      * @access public
      * @static
@@ -204,7 +204,7 @@ class I18n
     }
 
     /**
-     * detect the clients supported languages and return them ordered by preference
+     * Detect the clients supported languages and return them ordered by preference
      *
      * From: https://stackoverflow.com/questions/3770513/detect-browser-language-in-php#3771447
      *
@@ -239,7 +239,7 @@ class I18n
     }
 
     /**
-     * get currently loaded language
+     * Get currently loaded language
      *
      * @access public
      * @static
@@ -251,7 +251,7 @@ class I18n
     }
 
     /**
-     * get list of language labels
+     * Get list of language labels
      *
      * Only for given language codes, otherwise all labels.
      *
@@ -273,7 +273,7 @@ class I18n
     }
 
     /**
-     * set the default language
+     * Set the default language
      *
      * @access public
      * @static
@@ -287,7 +287,7 @@ class I18n
     }
 
     /**
-     * get language file path
+     * Get language file path
      *
      * @access protected
      * @static
@@ -303,7 +303,7 @@ class I18n
     }
 
     /**
-     * determines the plural form to use based on current language and given number
+     * Determines the plural form to use based on current language and given number
      *
      * From: https://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
      *
@@ -346,7 +346,7 @@ class I18n
     }
 
     /**
-     * compares two language preference arrays and returns the preferred match
+     * Compares two language preference arrays and returns the preferred match
      *
      * From: https://stackoverflow.com/questions/3770513/detect-browser-language-in-php#3771447
      *
@@ -398,7 +398,7 @@ class I18n
     }
 
     /**
-     * compare two language IDs and return the degree they match
+     * Compare two language IDs and return the degree they match
      *
      * From: https://stackoverflow.com/questions/3770513/detect-browser-language-in-php#3771447
      *
